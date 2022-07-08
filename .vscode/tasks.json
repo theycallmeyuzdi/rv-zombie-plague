@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "amxx-custom-compile",
+            "type": "process",
+            "command": "${workspaceRoot}\\addons\\amxmodx\\scripting\\amxxpc.exe",
+            "args": [
+                "${file}",
+                "-i${workspaceRoot}\\addons\\amxmodx\\scripting\\include",
+                "-o${workspaceRoot}\\addons\\amxmodx\\scripting\\compiled\\${fileBasenameNoExtension}.amxx"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
