@@ -170,45 +170,57 @@ native zp_core_cure( i_Client, i_Attacker = 0, i_Force = 0 );
  * Checks whether a player is Zombie
  *
  * @param i_Client			Valid player ID
+ * @param i_Return			Return behavior
+ *								* 0 - Returns 0 or 1 whether a player is Zombie
+ *								* 1 - Returns 0 or i_Client whether a player is Zombie
  *
- * @return					i_Client → player is Zombie
+ * @return					1 or i_Client → player is Zombie
  *							0 → player is not Zombie
- *							ZP_OUT_OF_RANGE + error → player ID is invalid
+ *							0 or ZP_OUT_OF_RANGE + error → player ID is invalid
  */
-native zp_core_is_zombie( i_Client );
+native zp_core_is_zombie( i_Client, i_Return = 0 );
 
 /**
  * Checks whether a player is First Zombie
  *
  * @param i_Client			Valid player ID
+ * @param i_Return			Return behavior
+ *								* 0 - Returns 0 or 1 whether a player is First Zombie
+ *								* 1 - Returns 0 or i_Client whether a player is First Zombie
  *
- * @return					i_Client → player is First Zombie
+ * @return					1 or i_Client → player is First Zombie
  *							0 → player is not First Zombie
- *							ZP_OUT_OF_RANGE + error → player ID is invalid
+ *							0 or ZP_OUT_OF_RANGE + error → player ID is invalid
  */
-native zp_core_is_first_zombie( i_Client );
+native zp_core_is_first_zombie( i_Client, i_Return = 0 );
 
 /**
  * Checks whether a player is Last Zombie
  *
  * @param i_Client			Valid player ID
+ * @param i_Return			Return behavior
+ *								* 0 - Returns 0 or 1 whether a player is Last Zombie
+ *								* 1 - Returns 0 or i_Client whether a player is Last Zombie
  *
- * @return					i_Client → player is Last Zombie
+ * @return					1 or i_Client → player is Last Zombie
  *							0 → player is not Last Zombie
- *							ZP_OUT_OF_RANGE + error → player ID is invalid
+ *							0 or ZP_OUT_OF_RANGE + error → player ID is invalid
  */
-native zp_core_is_last_zombie( i_Client );
+native zp_core_is_last_zombie( i_Client, i_Return = 0 );
 
 /**
- * Checks whether a player is Last Zombie
+ * Checks whether a player is Last Human
  *
  * @param i_Client			Valid player ID
+ * @param i_Return			Return behavior
+ *								* 0 - Returns 0 or 1 whether a player is Last Human
+ *								* 1 - Returns 0 or i_Client whether a player is Last Human
  *
- * @return					i_Client → player is Last Zombie
- *							0 → player is not Last Zombie
- *							ZP_OUT_OF_RANGE + error → player ID is invalid
+ * @return					1 or i_Client → player is Last Human
+ *							0 → player is not Last Human
+ *							0 or ZP_OUT_OF_RANGE + error → player ID is invalid
  */
-native zp_core_is_last_human( i_Client );
+native zp_core_is_last_human( i_Client, i_Return = 0 );
 
 /**
  * Returns the count of alive Zombies

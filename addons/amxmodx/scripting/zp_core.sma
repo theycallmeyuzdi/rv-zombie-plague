@@ -231,58 +231,58 @@ public _core_cure( /* i_Plugin, i_Parameter */ )
 
 public _core_is_zombie( /* i_Plugin, i_Parameter */ )
 {
-	new i_Client = get_param( 1 );
+	new i_Client = get_param( 1 ), i_Return = get_param( 2 );
 
 	if( !is_user_valid_connected( i_Client ) )
 	{
 		log_error( AMX_ERR_NATIVE, "%s Player is not in-game (%d)", ZP_PREFIX, i_Client );
 
-		return ZP_OUT_OF_RANGE;
+		return i_Return ? ZP_OUT_OF_RANGE : 0;
 	}
 
-	return bitsum_get( g_bIsZombie, i_Client ) ? i_Client : 0;
+	return bitsum_get( g_bIsZombie, i_Client ) ? ( i_Return ? i_Client : 1 ) : 0;
 }
 
 public _core_is_first_zombie( /* i_Plugin, i_Parameter */ )
 {
-	new i_Client = get_param( 1 );
+	new i_Client = get_param( 1 ), i_Return = get_param( 2 );
 
 	if( !is_user_valid_connected( i_Client ) )
 	{
 		log_error( AMX_ERR_NATIVE, "%s Player is not in-game (%d)", ZP_PREFIX, i_Client );
 
-		return ZP_OUT_OF_RANGE;
+		return i_Return ? ZP_OUT_OF_RANGE : 0;
 	}
 
-	return bitsum_get( g_bIsFirstZombie, i_Client ) ? i_Client : 0;
+	return bitsum_get( g_bIsFirstZombie, i_Client ) ? ( i_Return ? i_Client : 1 ) : 0;
 }
 
 public _core_is_last_zombie( /* i_Plugin, i_Parameter */ )
 {
-	new i_Client = get_param( 1 );
+	new i_Client = get_param( 1 ), i_Return = get_param( 2 );
 
 	if( !is_user_valid_connected( i_Client ) )
 	{
 		log_error( AMX_ERR_NATIVE, "%s Player is not in-game (%d)", ZP_PREFIX, i_Client );
 
-		return ZP_OUT_OF_RANGE;
+		return i_Return ? ZP_OUT_OF_RANGE : 0;
 	}
 
-	return bitsum_get( g_bIsLastZombie, i_Client ) ? i_Client : 0;
+	return bitsum_get( g_bIsLastZombie, i_Client ) ? ( i_Return ? i_Client : 1 ) : 0;
 }
 
 public _core_is_last_human( /* i_Plugin, i_Parameter */ )
 {
-	new i_Client = get_param( 1 );
+	new i_Client = get_param( 1 ), i_Return = get_param( 2 );
 
 	if( !is_user_valid_connected( i_Client ) )
 	{
 		log_error( AMX_ERR_NATIVE, "%s Player is not in-game (%d)", ZP_PREFIX, i_Client );
 
-		return ZP_OUT_OF_RANGE;
+		return i_Return ? ZP_OUT_OF_RANGE : 0;
 	}
 
-	return bitsum_get( g_bIsLastHuman, i_Client ) ? i_Client : 0;
+	return bitsum_get( g_bIsLastHuman, i_Client ) ? ( i_Return ? i_Client : 1 ) : 0;
 }
 
 public _core_get_count_zombie( /* i_Plugin, i_Parameter */ )

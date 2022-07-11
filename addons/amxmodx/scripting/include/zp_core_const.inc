@@ -23,8 +23,8 @@
 /**
  * Version string and number
  */
-#define ZP_VERSION_STR "1.0.0"
-#define ZP_VERSION_NUM 100
+#define ZP_VERSION_STR "1.0.1"
+#define ZP_VERSION_NUM 101
 
 /**
  * Author
