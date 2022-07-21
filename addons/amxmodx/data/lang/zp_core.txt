@@ -1,0 +1,8 @@
+[en]
+
+INFO_ZOMBIE = Zombie
+INFO_HUMAN = Human
+
+MENU_BACK = Back
+MENU_NEXT = Next
+MENU_EXIT = Exit

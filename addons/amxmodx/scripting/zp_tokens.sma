@@ -51,6 +51,8 @@ public plugin_init( )
 	g_iForward[ FW_TOKENS_UPDATE_PRE ] = CreateMultiForward( "zp_fw_tokens_update_pre", ET_CONTINUE, FP_CELL, FP_CELL, FP_CELL );
 	g_iForward[ FW_TOKENS_UPDATE_POST ] = CreateMultiForward( "zp_fw_tokens_update_post", ET_IGNORE, FP_CELL, FP_CELL, FP_CELL );
 
+	register_dictionary( "zp_tokens.txt" );
+
 	// RegisterHam( Ham_Spawn, "player", "fwHamSpawnPost", true, true );
 	// RegisterHam( Ham_Killed, "player", "fwHamKilledPost", true, true );
 }

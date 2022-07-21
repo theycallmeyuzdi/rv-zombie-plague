@@ -77,6 +77,8 @@ public plugin_init( )
 	g_iForward[ FW_CORE_LAST_ZOMBIE ] = CreateMultiForward( "zp_fw_core_last_zombie", ET_IGNORE, FP_CELL );
 	g_iForward[ FW_CORE_LAST_HUMAN ] = CreateMultiForward( "zp_fw_core_last_human", ET_IGNORE, FP_CELL );
 
+	register_dictionary( "zp_core.txt" );
+
 	RegisterHam( Ham_Spawn, "player", "fwHamSpawnPost", true, true );
 	RegisterHam( Ham_Killed, "player", "fwHamKilledPost", true, true );
 }

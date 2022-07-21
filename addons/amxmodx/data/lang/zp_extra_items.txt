@@ -1,0 +1,5 @@
+[en]
+
+MENU_TITLE_EXTRA_ITEMS = Extra Items
+
+MSG_EXTRA_ITEMS_EMPTY = Extra items menu is empty!
